@@ -1,0 +1,6 @@
+[data-semana="1,2,3,4,5"].aberto::before {
+  background: rgb(85, 255, 91) !important;
+}
+[data-semana="1,2,3,4,5"]::before {
+  background: rgb(235, 39, 4) !important;
+}

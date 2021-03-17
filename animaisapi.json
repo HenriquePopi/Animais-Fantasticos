@@ -1,0 +1,10 @@
+[
+  { "animal":"Raposa",
+  "especimes": 5750},
+  { "animal":"Lobo",
+  "especimes": 4874},
+  { "animal":"Esquilo",
+  "especimes": 12511},
+  { "animal":"Urso",
+  "especimes": 483}
+]
