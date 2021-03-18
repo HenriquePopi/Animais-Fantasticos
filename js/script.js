@@ -1,5 +1,5 @@
 import ScrollSuave from './modules/scroll-suave.js';
-import initAnimacaoScroll from './modules/scroll-animacao.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
@@ -21,7 +21,7 @@ acordion.init()
 const tabNav = new TabNav('[data-tab="menu"] li','[data-tab="content"] section')
 tabNav.init()
 
-initAnimacaoScroll();
+
 
 const modal = new Modal('[data-modal="abrir"]','[data-modal="fechar"]','[data-modal="container"]');
 modal.init()
@@ -31,7 +31,8 @@ initDropdownMenu();
 initMenuMobile()
 initFuncionamento()
 
-
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]')
+scrollAnima.init()
 
 fetchAnimais('../../animaisapi.json', ".numeros-grid")
 fetchBtnc(`https://blockchain.info/ticker`)
