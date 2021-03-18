@@ -4,7 +4,7 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdownMenu from './modules/dropdown-menu.js';
+import DropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 //import initAnimaNumeros from './modules/anima-numeros.js';
 import initFuncionamento from './modules/funcionamento.js';
@@ -27,12 +27,15 @@ const modal = new Modal('[data-modal="abrir"]','[data-modal="fechar"]','[data-mo
 modal.init()
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init()
-initDropdownMenu();
+
 initMenuMobile()
 initFuncionamento()
+
 
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]')
 scrollAnima.init()
 
+const dropdown = new DropdownMenu("[data-dropdown]")
+dropdown.init()
 fetchAnimais('../../animaisapi.json', ".numeros-grid")
 fetchBtnc(`https://blockchain.info/ticker`)
