@@ -1,9 +1,10 @@
+import debounce from './debounce.js';
 export default class ScrollAnima{
   constructor(sections){
   this.sections = document.querySelectorAll(sections);
   this.windowMetade = window.innerHeight * 0.6;
 
-  this.checkDisatance = this.checkDisatance.bind(this)
+  this.checkDisatance = debounce(this.checkDisatance.bind(this),50)
   }
   // cria um array de objetos contendo contendo um elemento do window e sua distancia do topo
   getDistance(){
