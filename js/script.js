@@ -28,6 +28,9 @@ modal.init()
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init()
 
+const dropDownMenu = new DropdownMenu('[data-dropdown]');
+dropDownMenu.init()
+
 initMenuMobile()
 initFuncionamento()
 
@@ -35,7 +38,5 @@ initFuncionamento()
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]')
 scrollAnima.init()
 
-const dropdown = new DropdownMenu("[data-dropdown]")
-dropdown.init()
 fetchAnimais('../../animaisapi.json', ".numeros-grid")
 fetchBtnc(`https://blockchain.info/ticker`)
