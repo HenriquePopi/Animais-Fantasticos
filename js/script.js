@@ -8,7 +8,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 //import initAnimaNumeros from './modules/anima-numeros.js';
 import initFuncionamento from './modules/funcionamento.js';
-import initFetchAnimais from './modules/fetchanimais.js';
+import fetchAnimais from './modules/fetchanimais.js';
 import initFetchBtnc from './modules/fetchbtnc.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]')
@@ -30,5 +30,7 @@ tooltip.init()
 initDropdownMenu();
 initMenuMobile()
 initFuncionamento()
-initFetchAnimais()
+
 initFetchBtnc()
+
+fetchAnimais('../../animaisapi.json', ".numeros-grid")
