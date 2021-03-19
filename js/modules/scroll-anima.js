@@ -16,7 +16,6 @@ export default class ScrollAnima{
       };
       
     })
-    console.log(this.distance)
   }
   //verifica se algum elemento se encontra na metade da tela em relaçao ao scroll
   // caso positivo inicia a animação para q seja animado caso negativo, desfaz a animação
