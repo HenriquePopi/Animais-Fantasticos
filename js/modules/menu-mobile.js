@@ -1,24 +1,32 @@
 import outsideClick from './outsideclick.js';
 
-export default function initmenuButton(){
-const menuList =document.querySelector('[data-menu="lista"]')
-const menuButton = document.querySelector('[data-menu="button"]')
+export default class MenuButton{
+constructor(menuList, menuButton,events){
+  this.menuList =document.querySelector(menuList)
+  this.menuButton = document.querySelector(menuButton)
+  this.abreMenu = this.abreMenu.bind(this)
+  //setta valores de events
+  if(event === undefined) this.events = ['touchstart', 'click']
+  else this.events = events
+}
 
-
-function abreMenu(event){
-  menuList.classList.add("ativo")
-  menuButton.classList.add("ativo")
+abreMenu(event){
+  this.menuList.classList.add("ativo")
+  this.menuButton.classList.add("ativo")
   event.preventDefault();
-    outsideClick(menuList, ['touchstart', 'click'], () => {
-      menuList.classList.remove("ativo")
-      menuButton.classList.remove("ativo")
+    outsideClick(this.menuList,this.events, () => {
+      this.menuList.classList.remove("ativo")
+      this.menuButton.classList.remove("ativo")
     });
   }
-
-if(menuButton){
-
-    menuButton.addEventListener("click", abreMenu)
-    menuButton.addEventListener("touchstart", abreMenu)
+  addEvents(){
+    this.events.forEach(element =>this.menuButton.addEventListener(element, this.abreMenu));
+  }
+  init(){
+    if(this.menuButton && this.menuList){
+      this.addEvents()
+    }
+    return this
   }
 
 
