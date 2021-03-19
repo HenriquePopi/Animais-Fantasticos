@@ -7,7 +7,7 @@ import Tooltip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 //import initAnimaNumeros from './modules/anima-numeros.js';
-import initFuncionamento from './modules/funcionamento.js';
+import Funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetchanimais.js';
 import fetchBtnc from './modules/fetchbtnc.js';
 
@@ -31,7 +31,8 @@ const dropDownMenu = new DropdownMenu('[data-dropdown]');
 dropDownMenu.init()
 const menuMobile = new MenuMobile('[data-menu="lista"]','[data-menu="button"]') 
 menuMobile.init()
-initFuncionamento()
+const funcionamento = new Funcionamento('[data-semana]')
+funcionamento.init()
 
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]')
 scrollAnima.init()
